@@ -13,10 +13,10 @@
           <a class="nav-link active" aria-current="page" href="primo">Numero primo</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link" href="">Numero amigo</a>
+          <a class="nav-link" href="numeros-amigos">Numero amigo</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link" href="#">Cuadratico</a>
+          <a class="nav-link" href="cuadratica">Cuadratico</a>
         </li>
         <li class="nav-item">
             <a class="nav-link" href="notas">Notas</a>

@@ -7,7 +7,7 @@ use Illuminate\Http\Request;
 
 class CuadraticaController extends Controller
 {
-    public function formularioCuadratica(){
+    public function cuadratica(){
         return view('formularioCuadratica');
     }
     public function raiz(Request $request)
@@ -32,7 +32,8 @@ class CuadraticaController extends Controller
 
 
         if ($discriminante < 0) {
-            return "Las raíces de la ecuación cuadrática son complejas.";
+            // return "Las raíces de la ecuación cuadrática son complejas.";
+            return view('resultadocuadratica')->with(['variable1'=>"Las raíces de la ecuación cuadrática son complejas."]);
         }
 
 
@@ -43,6 +44,8 @@ class CuadraticaController extends Controller
         $modelCuadratica->raiz2 = $raiz2;
         $modelCuadratica->save();
 
-        return "Las raíces de la ecuación cuadrática son: $raiz1, $raiz2";
+        // return "Las raíces de la ecuación cuadrática son: $raiz1, $raiz2";
+        return view('resultadocuadratica')->with(['raiz1'=>$raiz1,'raiz2'=>$raiz2]);
     }
+    
 }

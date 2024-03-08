@@ -56,5 +56,5 @@ Route::post('/primo-store',[PrimernumberController::class,'primoStore'])->name('
 Route::get('/cuadratica',[CuadraticaController::class,'cuadratica']);
 Route::post('/cuadratia-store',[CuadraticaController::class,'raiz'])->name('cuadratica.store');
 
-Route::get('/pagina',[PaginaController::class,'formularioPagina']);
+Route::get('/pagina',[PaginaController::class,'formularioPagina'])->name('pagina');
 Route::post('/pagina-store',[PaginaController::class,'paginaStore'])->name('pagina.store');
