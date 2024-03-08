@@ -4,6 +4,9 @@ use App\Http\controllers\ProductController;
 use App\Http\controllers\RappiController;
 use App\Http\Controllers\NotasController;
 use App\Http\Controllers\PrimoController;
+use App\Http\Controllers\PaginaController;
+use App\Http\Controllers\CuadraticaController;
+
 use App\Http\Controllers;
 use Illuminate\Support\Facades\Route;
 
@@ -23,6 +26,7 @@ Route::get('/', function () {
 });
 
 use App\Http\Controllers\NumerosAmigosController;
+use App\Models\Cuadratica;
 use App\Models\Primernumber;
 
 Route::get('/numeros-amigos', [NumerosAmigosController::class, 'mostrarFormulario']);
@@ -48,3 +52,9 @@ Route::post('/formulario-store',[RappiController::class,'rappiStore'])->name('ra
 
 Route::get('/primo',[PrimernumberController::class,'formularioPrimo']);
 Route::post('/primo-store',[PrimernumberController::class,'primoStore'])->name('primo.store');
+
+Route::get('/cuadratica',[CuadraticaController::class,'cuadratica']);
+Route::post('/cuadratia-store',[CuadraticaController::class,'raiz'])->name('cuadratica.store');
+
+Route::get('/pagina',[PaginaController::class,'formularioPagina']);
+Route::post('/pagina-store',[PaginaController::class,'paginaStore'])->name('pagina.store');
